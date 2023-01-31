@@ -1,0 +1,133 @@
+footer {
+    background: #dc9b9b; 
+    border: 6px solid #e7dbdd; 
+    border-radius: 5px;
+    z-index: 1;
+    position: relative;
+    box-shadow: 30px 20px 20px 5px rgba(0, 0, 0, 0.15),
+    -15px -15px 35px rgba(255, 253, 253, 0.253),
+    inset -1px -1px 10px rgba(0, 0, 0, 0.2);
+    padding: 3rem;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 7rem;
+    width: 100%;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    box-shadow: inset 10px 10px 20px rgba(0,0,0,0.1),
+                inset -5px -5px 15px rgba(249, 249, 249, 0.2);
+    z-index: -1;
+}
+
+footer a {
+    color: var(--bg);
+}
+.arrow {
+    color: #e7dbdd;
+    position: absolute;
+    top: -145%;
+    right: 5%;
+    width: 20rem;
+    height: 20rem;
+    animation: fadeInFromTop .5s linear forwards, floating ease 4s infinite;
+}
+
+.footer-up {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #e7dbdd;
+    position: absolute;
+    top: -25%;
+    right: 8%;
+    text-shadow:rgba(0, 0, 0, 0.15);
+}
+
+@keyframes fadeOnFromTop {
+    from{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floating {
+    0%{
+        transform: translate(0%, 0%) rotate(360deg);
+    }
+    25%{
+        transform: translate(20%, 35%) rotate(360deg);
+    }
+    50%{
+        transform: translate(10%, 5%) rotate(360deg);
+    }
+    75%{
+        transform: translate(0%, 15%) rotate(360deg);
+    }
+    100%{
+        transform: translate(0%, 0%) rotate(360deg);
+    }
+}
+
+.permalinks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 1.2rem;
+    gap: 2rem;
+    margin: 0 auto 1rem;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.footer-socials a {
+    background: var(--bg);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.7rem;
+    border: 1px solid transparent;
+}
+
+.footer-socials a:hover {
+    background: transparent;
+    color: var(--bg);
+    border-color: var(--bg);
+}
+
+.footer-copyright {
+    margin-bottom: 4rem;
+    color: var(--bg);
+}
+
+  /* Media Breakpoints (MD Devices) */
+  @media screen and (max-width: 1024px) {
+    .footer-up {
+        top: -20%;
+        right: 40%;
+    }
+
+    .arrow {
+        display: none;
+    }
+}
+/* Media Breakpoints (SM Devices) */
+@media screen and (max-width: 600px){
+    .permalinks {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .footer-socials {
+        margin-bottom: 2.6rem;
+    }
+}

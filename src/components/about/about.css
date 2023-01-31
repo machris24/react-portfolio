@@ -1,0 +1,298 @@
+/* Section */
+#about {
+    margin-top: 2rem;
+  }
+
+  /* Container */
+.about-container {
+    display: grid;
+    grid-template-columns: 5% 35% 50% 5%;
+    grid-template-rows: 15% 85%;
+    gap: 2%;
+    background: #e7dbdd;
+    border: 6px solid #dc9b9b;
+    border-radius: 50px;
+    z-index: 2;
+    width: 100%;
+    max-width: 90rem;
+    height: 50rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 30px 20px 20px 5px rgba(0, 0, 0, 0.15),
+            inset 15px 15px 10px rgba(255, 255, 255, 0.75),
+            -15px -15px 35px rgba(255, 253, 253, 0.253),
+            inset -1px -1px 10px rgba(0, 0, 0, 0.2);
+}
+
+.about-container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 48px;
+    box-shadow: inset 10px 10px 20px rgba(0,0,0,0.5),
+                inset -5px -5px 15px rgb(204, 197, 197);
+    z-index: 2;
+    overflow: hidden;
+}
+
+/* Contatiner Divs */
+
+/* Title */
+.title_about {
+    margin-top: 2rem;
+    grid-area: 1 / 2 / 2 / 4;
+}
+
+/* Photo with floaters */
+.about-me {
+    width: 100%;
+    aspect-ratio: 1/1;
+    z-index: 1;
+    grid-area: 2 / 2 / 3 / 3;
+    position: relative;
+}
+
+.about-me-photo {
+    position: absolute;
+    transition: var(--transition);
+    top: -8rem;
+    left: -6.2rem; 
+}
+
+.about-me-photo img {
+  filter: drop-shadow(2px -3px 2px rgba(7, 7, 7, 0.5));
+  height: 48rem;
+  width: 33rem;
+  z-index: 1;
+   
+}
+
+/* Floating Images */
+
+
+.floating {
+    position: absolute;
+    justify-content: space-around;
+    display: flex;
+    background: var(--light);
+    box-shadow: 0px 19px 60px rgb(0 0 0 / 8%);
+    border-radius: 17px;
+    align-items: center;
+    padding: 10px 28px 10px 10px;
+    height: 3.5rem;
+    width: 10.5rem;
+}
+
+.floating>img {
+    position: absolute;
+    width: 3.3rem;
+    right: 0.8rem;
+    padding-bottom: 0.5rem;
+}
+
+.floating>span {
+    position: absolute;
+    font-size: 15px;
+    color: var(--primary);
+    left: 1.1rem;
+}
+
+.floating_content {
+    position: absolute;
+}
+
+.floating_web {
+    position: absolute;
+    justify-content: space-around;
+    display: flex;
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 30px 70px rgba(0, 0, 0, 0.15);
+    border-radius: 17px;
+    align-items: center;
+    padding: 10px 28px 10px 10px;
+    height: 5rem;
+    width: 15rem;
+    border: 7px solid rgba(247, 190, 2, 0.45);
+}
+
+.floating_web>img {
+    position: absolute;
+    width: 5rem;
+    right: 0.8rem;
+}
+
+.floating_web>span {
+    position: absolute;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--bg);
+    left: 1.1rem;
+}
+
+.floating_admin {
+    position: absolute;
+}
+
+.floating_cust {
+    position: absolute;
+}
+
+.floating_influencer {
+    position: absolute;
+    z-index: 2;
+}
+
+.floating_hr {
+    position: absolute;
+
+}
+
+
+/* Contents */
+
+/* Content Container */
+.about-content {
+    margin-right: 5%;
+    margin-bottom: 2%;
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.about-content h3 {
+    margin: 2rem 1rem;
+    color: var(--bg);
+}
+
+.about-content p {
+   margin: 1rem 1rem 2rem;
+   color: #8b8686;
+   z-index: 5;
+}
+
+.about-content a {
+   position: relative;
+   z-index: 6;
+   margin: 0 1rem 2rem;
+}
+
+/* Cards Container */
+.about-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.about-card {
+    border: 2px solid rgba(221, 217, 217, 0.3);
+    transition: color 0.2s ease-out, transform 0.2s ease-out;
+    box-shadow: 4px 4px 6px 0 rgba(0, 0, 0, 0.1),
+    -4px -4px 6px #fff;
+    border-radius: 1rem;
+    padding: 1rem;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+    z-index: 4;
+}
+
+.about-card:hover {
+    box-shadow: inset 5px 5px 10px #c7c4c4,
+                inset -5px -5px 10px #fff;
+    cursor: default;
+}
+
+.about-icon {
+    color: var(--primary);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.about-card h5 {
+    font-size: 0.95rem;
+    color: #a9513f
+}
+
+.about-card small {
+    font-size: 0.7rem;
+    color: #8b8686;
+}
+
+/* Media Breakpoints (MD Devices) */
+@media screen and (max-width: 1024px){
+    #about {
+        margin-top: 4rem;
+      }
+
+    .about-container {
+        grid-template-columns: 5% 90% 5%;
+        grid-template-rows: 15% 30% 55%;
+        gap: 0;
+        width: 37.8rem;
+        height: 80rem;
+        
+    }
+
+    .title_about {
+        grid-area: 1 / 2 / 2 / 3; 
+    }
+
+    .about-me {
+        grid-area: 2 / 2 / 3 / 3; 
+        width: 50%;
+        margin: 0 auto 2rem;
+    }
+
+    .about-me-photo {
+        top: -4.4rem;
+        left: 1rem; 
+    }
+
+    .about-me-photo img {
+        height: 29rem;
+        width: 25rem;
+    }
+
+    .about-content {
+        grid-area: 3 / 2 / 4 / 3; 
+    }
+
+    .about-content p {
+        margin: 1rem 2rem 1.5rem;
+    }
+
+    .about-cards {
+        padding: 1rem;
+    }
+}
+
+/* Media Breakpoints (SM Devices) */
+@media screen and (max-width: 600px){
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 0;
+        max-height: 50rem;
+    }
+
+    .about-me {
+        width: 65%;
+        margin: 0 auto 2rem;
+    }
+
+    .about-content p {
+        text-align: center;
+        margin: 1.5rem 2rem 1.5rem;
+    }
+
+    .about-cards {
+        gap: 0.5rem;
+    }
+
+    .about-card {
+        padding: 1rem;
+    }
+
+    .about-content a{
+        margin-left: 7.5rem;
+    }
+}
+
+

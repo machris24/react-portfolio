@@ -1,0 +1,490 @@
+#experience {
+  width: 60%;
+  margin: auto;
+}
+
+.experience-wrapper {
+  display: grid;
+  grid-template-columns: 70% 30% ;
+  gap: 0.5rem;
+  margin: 4.5rem 2rem;
+}
+
+.experience-container {
+  display: grid;
+  grid-template-columns: 5% repeat(3, 30%) 5%;
+  grid-template-rows: 20% 80%;
+  gap: 0.5rem;
+  background: #e7dbdd;
+  border: 6px solid #dc9b9b;
+  border-radius: 50px;
+  z-index: 1;
+  width: 100%;
+  max-width: 65rem;
+  height: 30rem;
+  position: relative;
+  margin: 0;
+  box-shadow: 30px 20px 20px 5px rgba(0, 0, 0, 0.15),
+    inset 15px 15px 10px rgba(255, 255, 255, 0.75),
+    -15px -15px 35px rgba(255, 253, 253, 0.253),
+    inset -1px -1px 10px rgba(0, 0, 0, 0.2);
+  grid-area: 1 / 1 / 2 / 2; 
+
+}
+
+.experience-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 48px;
+  box-shadow: inset 10px 10px 20px rgba(0,0,0,0.5),
+              inset -5px -5px 15px rgb(204, 197, 197);
+  z-index: 1;
+}
+
+.title_exp {
+  margin-top: 5rem;
+  margin: auto;
+  grid-area: 1 / 2 / 2 / 5; 
+}
+
+.experience-container .experience-front{
+  position: relative;
+  border: 2px solid rgba(221, 217, 217, 0.3);
+  transition: color 0.2s ease-out, transform 0.2s ease-out;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.05),
+              inset -5px -5px 5px rgba(255, 255, 255, 0.5),
+              5px 5px 5px rgba(0, 0, 0, 0.05),
+              -5px -5px 5px rgba(255, 255, 255, 0.5);
+  width: 18rem;
+  padding: 2.4rem 2rem;
+  border-radius: 2rem;
+  margin-bottom: 4rem;
+  grid-area: 2 / 2 / 3 / 3;
+  z-index: 2;
+}
+
+.experience-container .experience-back {
+  position: relative;
+  border: 2px solid rgba(221, 217, 217, 0.3);
+  transition: color 0.2s ease-out, transform 0.2s ease-out;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.05),
+              inset -5px -5px 5px rgba(255, 255, 255, 0.5),
+              5px 5px 5px rgba(0, 0, 0, 0.05),
+              -5px -5px 5px rgba(255, 255, 255, 0.5);
+  width: 18rem;
+  padding: 2rem 2rem;
+  border-radius: 2rem;
+  transition: var(--transition);
+  margin-bottom: 4rem;
+  grid-area: 2 / 3 / 3 / 4;
+  z-index: 2;
+}
+
+.experience-container .experience-tools {
+  position: relative;
+  border: 2px solid rgba(221, 217, 217, 0.3);
+  transition: color 0.2s ease-out, transform 0.2s ease-out;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.05),
+              inset -5px -5px 5px rgba(255, 255, 255, 0.5),
+              5px 5px 5px rgba(0, 0, 0, 0.05),
+              -5px -5px 5px rgba(255, 255, 255, 0.5);
+  width: 18rem;
+  padding: 2rem 2rem;
+  border-radius: 2rem;
+  transition: var(--transition);
+  margin-bottom: 4rem;
+  grid-area:  2 / 4 / 3 / 5;
+  z-index: 2;
+}
+
+.experience-container .experience-front .box {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 1rem;
+  background: #e7dbdd;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  transition: 0.5s;
+}
+
+.experience-container .experience-back .box {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 1rem;
+  background: #e7dbdd;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  transition: 0.5s;
+}
+
+.experience-container .experience-tools .box {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 1rem;
+  background: #e7dbdd;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  transition: 0.5s;
+}
+
+
+.experience-container .experience-front:hover .box {
+  transform: translateY(-30px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(45deg, #a13a57, #d88a8a);
+}
+
+.experience-container .experience-back:hover .box {
+  transform: translateY(-30px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(45deg, #4f084c, #a23b54);
+}
+
+.experience-container .experience-tools:hover .box {
+  transform: translateY(-30px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(45deg, #d88a8a, #a9513f);
+}
+
+
+.experience-container .experience-front .box .content {
+  padding: 20px;
+  text-align: center;
+  z-index: 4;
+}
+
+.experience-container .experience-back .box .content {
+  padding: 20px;
+  text-align: center;
+  z-index: 4;
+}
+
+.experience-container .experience-tools .box .content {
+  padding: 20px;
+  text-align: center;
+  z-index: 4;
+}
+
+.experience-container .experience-back .box .content h3 {
+  position: absolute;
+  bottom: -20px;
+  right: -3px;
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: rgba(107, 2, 128, 0.144);
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.experience-container .experience-front .box .content h3 {
+  position: absolute;
+  top: 10px;
+  right: 13px;
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: rgba(107, 2, 128, 0.144);
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.experience-container .experience-tools .box .content h3 {
+  position: absolute;
+  top: -20px;
+  right: 50px;
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: rgba(107, 2, 128, 0.144);
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.experience-container .experience-front:hover .box .content h3 {
+  color: rgba(255, 255, 255, 0.265);
+}
+
+.experience-container .experience-front:hover .box .content .experience-details {
+  background: var(--light);
+  color: var(--bg--variant); 
+}
+
+.experience-container .experience-back:hover .box .content h3 {
+  color: rgba(255, 255, 255, 0.265);
+}
+
+.experience-container .experience-back:hover .box .content .experience-details {
+  background: var(--light);
+  color: var(--bg--variant);
+}
+
+.experience-container .experience-tools:hover .box .content h3 {
+  color: rgba(255, 255, 255, 0.265);
+}
+
+.experience-container .experience-tools:hover .box .content .experience-details {
+  background: var(--light);
+  color: var(--bg--variant);
+}
+
+
+.experience-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 81px));
+  grid-auto-rows: 25px;
+  grid-auto-flow: dense;
+  gap: 2.5px;
+  width: 15rem;
+  height: 10rem;
+  z-index: 5;
+}
+
+.experience-content.backend {
+  margin-bottom: 4rem;
+  margin-left: 9rem;;
+}
+
+.experience-content.frontend {
+  margin-top: 7rem;
+}
+
+.experience-content.tools {
+  margin-top: 5rem;
+  margin-left: 5rem;
+}
+
+.l-stretch {
+  grid-column: span 2;
+}
+
+.experience-details {
+  background: #98006d;
+  border-radius: 5px;
+}
+
+
+.cube-container {
+ display: flex;
+ flex-direction: column;
+ grid-area: 1 / 2 / 2 / 3;
+}
+
+.stage-cube-cont {
+    width: 100%;
+    height: 100%;
+    padding-top: 18%;
+    margin-left: 0;
+    overflow: hidden;
+  }
+  
+  .cubespinner {
+    animation-name: spincube;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 12s;
+    transform-style: preserve-3d;
+    transform-origin: 100px 100px 0;
+    margin-left: calc(50% - 100px);
+  }
+
+  @keyframes spincube {
+    from,
+    to {
+      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    16% {
+      transform: rotateY(-90deg) rotateZ(90deg);
+    }
+    33% {
+      transform: rotateY(-90deg) rotateX(90deg);
+    }
+    50% {
+      transform: rotateY(-180deg) rotateZ(90deg);
+    }
+    66% {
+      transform: rotateY(-270deg) rotateX(90deg);
+    }
+    83% {
+      transform: rotateX(90deg);
+    }
+  }
+
+  .face1 {
+    transform: translateZ(100px);
+    color: #dd0031;
+  }
+  .face2 {
+    transform: rotateY(90deg) translateZ(100px);
+    color: #f06529;
+  }
+  .face3 {
+    transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+    color: #28a4d9;
+  }
+  .face4 {
+    transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+    color: #5ed4f4;
+  }
+  .face5 {
+    transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+    color: #efd81d;
+  }
+  .face6 {
+    transform: rotateX(-90deg) translateZ(100px);
+    color: #ec4d28;
+  }
+ 
+
+  .face1,
+  .face2,
+  .face3,
+  .face4,
+  .face5,
+  .face6 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ccc;
+    background: rgba(255, 255, 255, 0.4);
+    text-align: center;
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px 0px lightyellow;
+  }
+
+  /* Media Breakpoints (MD Devices) */
+@media screen and (max-width: 1024px){
+
+  #experience {
+    grid-template-columns: 5% 90% 5%;
+    grid-template-rows: 30% 70%;
+    margin-top: 2rem;
+  }
+
+    .experience-container {
+      margin: auto;
+      grid-area: 2 / 2 / 3 / 3; 
+      grid-template-columns: 5% 90% 5%;
+      grid-template-rows: 10% repeat(3, 30%);
+      gap: 0;
+      width: 37.8rem;
+      height: 60rem;
+  }
+
+  .title_exp {
+    grid-area: 1 / 2 / 2 / 3; 
+  }
+
+  .cube-container {
+    grid-area: 1 / 2 / 2 / 3; 
+    width: 100%;
+    height: 22rem;
+    margin-bottom: 3rem;
+  }
+
+  .stage-cube-cont {
+    padding-top: 5rem;
+  }
+
+  
+  .experience-container .experience-front{
+    grid-area: 2 / 2 / 3 / 3; 
+    width: 80%;
+    height: 15rem;
+    padding: 1.5rem;
+    margin: auto;
+  }
+  
+  .experience-container .experience-back {
+    grid-area: 3 / 2 / 4 / 3;  
+    width: 80%;
+    height: 15rem;
+    padding: 1.5rem;
+    margin: auto;
+  }
+
+  .experience-container .experience-tools {
+    grid-area: 4 / 2 / 5 / 3;  
+    width: 80%;
+    height: 15rem;
+    padding: 1.5rem;
+    margin: auto;
+
+  } 
+
+  .experience-container .experience-front .box .content h3 {
+    bottom: 40px;
+    right: 9.4rem;
+  }
+
+  .experience-container .experience-tools .box .content h3 {
+    top: -27px;
+    right: 120px;
+  }
+
+  .experience-content.backend {
+    margin-top: 5rem;
+    margin-right: 5rem;
+    width: 25rem;
+  }
+  
+  .experience-content.frontend {
+    margin-top: 9rem;
+    margin-left: 4.5rem;
+    width: 25rem;
+  }
+  
+  .experience-content.tools {
+    margin-top: 8rem;
+    margin-left: 5rem;
+    width: 25rem;
+  }
+
+
+
+}
+
+
+/* Media Breakpoints (SM Devices) */
+@media screen and (max-width: 600px){
+
+  .cube-container {
+    display: none;
+  }
+
+  .experience-container .experience-front{
+    width: 90%;
+    padding: 1.5rem;
+    margin: 0 auto;
+    order: 2;
+  }
+  
+  .experience-container .experience-back {
+    width: 90%;
+    padding: 1.5rem;
+    margin: 0 auto;
+    order: 3;
+  }
+}
