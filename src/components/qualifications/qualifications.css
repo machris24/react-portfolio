@@ -1,3 +1,11 @@
+#qualifications {
+  height: 100%;
+  max-height: 60rem;
+  width: 100%;
+  max-width: 100rem;
+  margin: auto;
+}
+
 .qualifications-container {
    display: grid;
    grid-template-columns: 5% repeat(2, 45%) 5%;
@@ -12,6 +20,9 @@
    inset 15px 15px 10px rgba(255, 255, 255, 0.75),
    -15px -15px 35px rgba(255, 253, 253, 0.253),
    inset -1px -1px 10px rgba(0, 0, 0, 0.2);
+   width: 100%;
+   max-width: 90rem;
+   margin-top: 3rem;
 }
 
 .swiper {
@@ -53,10 +64,37 @@
     font-size: 25px;
   }
 
+  @media screen and (max-width: 1315px){
+    #qualifications {
+      margin-top: 18rem;
+    }
+
+    .qualifications-container {
+      grid-template-columns: 5% 90% 5%;
+      grid-template-rows: 15% 45% 40%;
+      height: 70rem;
+   }
+  
+   .qualifications-title {
+      grid-area: 1 / 2 / 2 / 3; 
+   }
+  
+   .certificate-gallery {
+      grid-area: 2 / 2 / 3 / 3;
+      margin-top: -3rem;
+   }
+  
+   .awards-gallery {
+      grid-area: 3 / 2 / 4 / 3;
+      margin-top: -4rem;
+   }
+  }
+
   /* Media Breakpoints (MD Devices) */
 @media screen and (max-width: 1024px){
   #qualifications {
-    margin-top: 22rem;
+    margin-top: 3rem;
+    min-height: 70rem;
   }
 
   .qualifications-container {

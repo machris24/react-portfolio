@@ -11,7 +11,8 @@ footer {
     text-align: center;
     font-size: 0.9rem;
     margin-top: 7rem;
-    width: 100%;
+    width: 100vw;
+    min-width: 100%;
 }
 
 footer::before {
@@ -112,6 +113,10 @@ footer a {
 
   /* Media Breakpoints (MD Devices) */
   @media screen and (max-width: 1024px) {
+    footer {
+        margin-top: 10rem;
+    }
+
     .footer-up {
         top: -20%;
         right: 40%;
@@ -120,9 +125,16 @@ footer a {
     .arrow {
         display: none;
     }
+    
 }
 /* Media Breakpoints (SM Devices) */
 @media screen and (max-width: 600px){
+
+    footer {
+
+        /* width: var(--container-width-sm); */
+    }
+
     .permalinks {
         flex-direction: column;
         gap: 1.5rem;
