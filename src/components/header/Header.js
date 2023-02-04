@@ -1,5 +1,6 @@
 import ResumeDL from './ResumeDL'
 import Socials from './Socials'
+import Letterings from './jquery.lettering'
 import ME from '../../assets/me.png'
 import './header.css';
 
@@ -14,7 +15,7 @@ const Header = () => {
 
           <div className="container name-container">
             <h5 className="title-small">Hello I'm</h5>
-            <h1 className="title-big">Chris</h1>
+            <h1 className="title-big">CHRIS</h1>
             <h3 className="subtitle"> I love exploring, creating and designing websites for better user experience. I have a lifelong passion in learning and I enjoy pretending to be a Disney character and belt out their songs!</h3>
             <ResumeDL />
             
